@@ -3,7 +3,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     private float speed = 5;
-    private float jumpSpeed = 8;
+    private float jumpSpeed = 16;
 
     bool isGrounded;
 
@@ -25,6 +25,7 @@ public class playerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
         {
+            
             rb.AddForce(new Vector2(0, jumpSpeed),ForceMode2D.Impulse);
             isGrounded = false;
         }
